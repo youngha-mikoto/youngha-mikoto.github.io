@@ -11,9 +11,9 @@ categories: [ostep]
 - What are the general mechanisms?
 - How can we make them efficient?
 
-# 36.1 시스템 구조
+# **36.1 시스템 구조**
 
-## 일반적인 시스템의 고전적 구조
+### **일반적인 시스템의 고전적 구조**
 
 ![alt text](/assets/images/image.png)
 
@@ -27,3 +27,17 @@ categories: [ostep]
 
 - 고성능 장치들을 CPU에 가깝게 배치, 느린 성능의 장치들은 멀리 배치
 - 디스크처럼 느린 장치를 주변 장치 I/O 버스에 연결하여 얻는 이득: 많은 장치들을 연결할 수 있다.
+
+### **현대식 시스템 구조**
+
+![alt text](/assets/images/image2.png)
+
+- CPU는 인텔의 **DMI(Direct Media Interface)** 기술을 통해 I/O 칩에 연결되어 있다.
+- 나머지 장치들이 이 칩에 여러 다른 종류의 연결 방식을 사용하여 연결된다.
+
+- 하나 또는 그 이상의 하드 디스크들이 **eSATA(external SATA)** 방식으로 시스템에 연결되어 있다.
+- I/O 칩 아래 쪽으로는 여러 개의 **USB(Universal Serial Bus)** 인터페이스가 있다.
+- 느린 성능의 장치들을 연결하기 위해 USB가 사용된다.
+- 시스템에 또 다른 고성능의 장치들을 연결할 수 있도록 **PCIe**가 있다.
+- PCIe: Peripheral Component Interconnect Express
+- 고속의 저장 장치(**NVMe** 등)이 주로 여기에 연결이 된다.
